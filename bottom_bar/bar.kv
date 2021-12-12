@@ -1,0 +1,22 @@
+MDBoxLayout:
+    orientation: 'vertical'
+    MDToolbar:
+        title: 'Top Bar'
+        left_action_items: [["menu"]] #Add <lambda x : y> to include actions. y = app.exampleFunction()
+        right_action_items: [["dots-vertical"]]
+
+    MDLabel:
+        id: my_label
+        text: 'Some Stuff'
+        halign: "center"
+
+    MDBottomAppBar:
+        MDToolbar:
+            icon: "git" # Visit https://github.com/kivymd/KivyMD/blob/master/kivymd/icon_definitions.py for more icons
+            title: "Bottom Bar"
+            type: "bottom"
+            # mode: "free-end"
+            # mode: "free-center"
+            # mode: "end"
+            mode: "center"
+            on_action_button: app.presser()
