@@ -1,0 +1,28 @@
+MDBoxLayout:
+    orientation: 'vertical'
+
+    MDScreen:
+
+        MDLabel:
+            id: my_label
+            text: "some text"
+            halign: "center"
+
+        MDFloatingActionButtonSpeedDial:
+            data: app.data
+            root_button_anim: True
+
+            # Color modifications
+            # label_text_color: 1, 0, 0, 1 # To change the text color
+            # bg_color_stack_button: 1, 0, 0, 1 # To change icon background color
+            # bg_color_root_button: 1, 0, 0, 1 # To change SpeedDial button background color
+            # bg_hint_color: 1, 0, 0, 1 # To change hint background color
+            # color_icon_root_button: 1, 0, 0, 1 # To change SpeedDial button icon background color
+            # color_icon_stack_button: 1, 0, 0, 1 # To change options icon color
+
+            # Making the buttons work
+            callback: app.callback
+
+            # Speed Dial button status tracker
+            on_open: app.opened()
+            on_close: app.closed()
