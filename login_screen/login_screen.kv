@@ -1,0 +1,57 @@
+Screen:
+    MDCard:
+        size_hint: None, None
+        size: 300, 400
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        elevation: 10
+        padding: 25
+        spacing: 25
+        orientation: 'vertical'
+
+        MDLabel:
+            id: welcome_label
+            text: 'welcome'
+            font_size: 40
+            halign: 'center'
+            size_hint_y: None
+            height: self.texture_size[1]
+            padding_y:15
+
+        MDTextFieldRound: # Go to https://kivymd.readthedocs.io/en/0.104.1/components/text-field/ for more examples on MDTextFields
+            id: user
+            hint_text: "Username"
+            icon_right: "account" # Visit https://github.com/kivymd/KivyMD/blob/master/kivymd/icon_definitions.py for more icons
+            size_hint_x: None
+            width: 200
+            font_size: 18
+            pos_hint: {"center_x": 0.5}
+
+        MDTextFieldRound:
+            id: passwd
+            hint_text: "Password"
+            icon_right: "eye-off"
+            size_hint_x: None
+            width: 200
+            font_size: 18
+            pos_hint: {"center_x": 0.5}
+            password: True
+        
+        MDRoundFlatButton:
+            text: 'Login'
+            font_size: 12
+            pos_hint: {'center_x': 0.5 }
+            on_press: app.logger()
+
+
+        MDRoundFlatButton:
+            text: 'Clear'
+            font_size: 12
+            pos_hint: {'center_x': 0.5 }
+            on_press: app.clear()
+
+        
+        # Go to https://github.com/kivymd/KivyMD/tree/master/kivymd/uix/button for more buttons
+
+        Widget: # In order to bush things up a little bit :)
+            size_hint_y: None
+            height: 10
