@@ -1,0 +1,36 @@
+<MySwiper@MDSwiperItem>
+
+    # to apply one image to all of the swipers, do the following
+    #FitImage:
+    #    source: "images/image-01.jpg"
+    #    radius: [20,]
+
+MDScreen:
+    
+    MDToolbar:
+        id: toolbar
+        title: "swiper"
+        elevation: 10
+        pos_hint: {'top': 1}
+    
+    MDSwiper:
+        # The 3 following lines are to make some spacing from the top bar
+
+        size_hint_y: None
+        height: root.height - toolbar.height - dp(40)
+        y: root.height - self.height - toolbar.height - dp(20)
+
+        MySwiper:
+            FitImage:
+                source: "images/image-01.jpg"
+                radius: [20,]
+        MySwiper:
+            FitImage:
+                source: "images/image-02.jpg"
+                radius: [20,]
+        MySwiper:
+            FitImage:
+                source: "images/image-03.jpg"
+                radius: [20,]
+        
+        
