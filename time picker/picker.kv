@@ -1,0 +1,10 @@
+MDFloatLayout:
+    MDRaisedButton:
+        text: "Pick date"
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        on_release: app.open_time_picker()
+
+    MDLabel:
+        id: time_label
+        text: "Label"
+        pos_hint: {'center_x': .95, 'center_y': .4}
